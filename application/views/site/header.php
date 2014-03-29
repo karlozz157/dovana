@@ -20,7 +20,8 @@
 			<div id="info-header">
 				<table>
 					<tr>
-						<td id="contact-table-header" style="border-bottom: 1px solid #4B565C;"><img src="<?php echo base_url(); ?>assets/site/images/icon-tel.png" id="icon-tel">
+						<td id="contact-table-header">
+							<img src="<?php echo base_url(); ?>assets/site/images/icon-tel.png" id="icon-tel">
 							<a href="<?php echo base_url(); ?>site/contacto">CONTACTO</a>
 						</td>
 						<td id="cart-table-header" rowspan="2" style="border-left: 1px solid #4B565C;">
@@ -42,8 +43,9 @@
 				<div id="search">
 					<form method="get" action="<?php echo base_url(); ?>site/search">
 						<img src="<?php echo base_url(); ?>assets/site/images/icon-search.png">
-						<input  type="text" name="q"/></div>
+						<input  type="text" name="q"/>
 					</form>
+				</div>
 			</div>
 			<div class="clear"></div>
 			<div id="menu">

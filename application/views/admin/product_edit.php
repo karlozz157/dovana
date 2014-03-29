@@ -113,11 +113,19 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label class="control-label">Productos Relacionados</label>
+				<div class="controls">
+					<input id="tags_1" name="products_related" type="text" class="m-wra tags" style="display: none;" value="<?php echo '' != $product['products_related'] ? implode(json_decode($product['products_related']), ',') : ''; ?>">
+				</div>
+			</div>
+			<!--			
+			<div class="control-group">
 				<label class="control-label">Producto Destacado</label>
 				<div class="controls">
 					<input type="checkbox" name="highlight" <?php echo 1 == $product['highlight']?'checked':''; ?> value="1">
 				</div>
-			</div>			
+			</div>
+			-->	
 			<div class="form-actions">
 				<button type="submit" class="btn blue">Guardar</button>
 				<a href="<?php echo base_url(); ?>admin/product_list" class="btn" >Cancelar</a>                            

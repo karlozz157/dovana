@@ -7,10 +7,7 @@
 }
 .alertify {
 	background: #FFF;
-	border: 10px solid #333; /* browsers that don't support rgba */
-	border: 10px solid rgba(0,0,0,.7);
-	border-radius: 8px;
-	box-shadow: 0 3px 3px rgba(0,0,0,.3);
+	border: 10px solid #72797d; /* browsers that don't support rgba */
 	-webkit-background-clip: padding;     /* Safari 4? Chrome 6? */
 	   -moz-background-clip: padding;     /* Firefox 3.6 */
 	        background-clip: padding-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */
@@ -21,46 +18,43 @@
 		border-radius: 4px;
 	}
 	.alertify-button {
-		border-radius: 4px;
 		color: #FFF;
-		font-weight: bold;
-		padding: 6px 15px;
+		padding: 8px;
 		text-decoration: none;
-		text-shadow: 1px 1px 0 rgba(0,0,0,.5);
-		box-shadow: inset 0 1px 0 0 rgba(255,255,255,.5);
-		background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-		background-image:    -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-		background-image:     -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-		background-image:      -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
-		background-image:         linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
 	}
-	.alertify-button:hover,
-	.alertify-button:focus {
-		outline: none;
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
-		background-image:    -moz-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
-		background-image:     -ms-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
-		background-image:      -o-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
-		background-image:         linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
-	}
-	.alertify-button:focus {
-		box-shadow: 0 0 15px #2B72D5;
-	}
-	.alertify-button:active {
-		position: relative;
-		box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-	}
+
 		.alertify-button-cancel,
 		.alertify-button-cancel:hover,
 		.alertify-button-cancel:focus {
-			background-color: #73787C;
-			border: 1px solid #73787C;
+		background-color: #D1CBC3;
+			border: 1px solid #D1CBC3;
+			color: #4B565C;
 		}
+
+		.alertify-button-cancel>span
+		{
+			font-size: 13px;
+			border: 1px solid #4B565C;
+			display: block;
+			font-family: 'Brandon Grotesque Bold';
+			padding: 10px 15px;			
+		}
+
 		.alertify-button-ok,
 		.alertify-button-ok:hover,
 		.alertify-button-ok:focus {
-			background-color: #2E64FE;
-			border: 1px solid #2E64FE;
+			background-color: #D1CBC3;
+			border: 1px solid #D1CBC3;
+			color: #4B565C;
+			margin-right: 10px;
+		}
+		.alertify-button-ok>span
+		{
+			font-size: 13px;
+			border: 1px solid #4B565C;
+			display: block;
+			font-family: 'Brandon Grotesque Bold';
+			padding: 10px 15px;			
 		}
 
 .alertify-log {

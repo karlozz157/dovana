@@ -63,7 +63,7 @@ class Site extends CI_Controller {
 		if(!$product)
 			show_404();
 
-		$products = $this->commerce->getRelatedProducts($product['category'], $product['id']);
+		$products = $this->commerce->getRelatedProducts($product['id']);
 		$this->view('product', array('product' => $product, 'products' => $products, 'images' => $images));
 	}
 

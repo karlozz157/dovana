@@ -51,6 +51,8 @@
 	<script src="<?php echo base_url(); ?>assets/admin/plugins/bootstrap-daterangepicker/date.js" type="text/javascript"></script>
 	<script src="<?php echo base_url(); ?>assets/admin/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>  
 
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+
 
 	<script src="<?php echo base_url(); ?>assets/admin/plugins/flot/jquery.flot.js"></script>
 	<script src="<?php echo base_url(); ?>assets/admin/plugins/flot/jquery.flot.resize.js"></script>
@@ -72,6 +74,7 @@
 	<script>
 		jQuery(document).ready(function() { 
 			App.init();
+			$('#tags_1').tagsInput({width:'auto'});
 			Notifications.init();
 			Validate.init();
 			Product.init();

@@ -284,6 +284,7 @@ class BackEnd extends MY_Crud{
 			'active'      => isset($_POST['active']) ? 1 : 0,
 			'highlight'   => isset($_POST['highlight']) ? 1: 0,
 			'stock'       => get_post('stock'),
+			'products_related' => json_encode(explode(',', get_post('products_related'))),
  		);
 
 		if(isset($_FILES['image']['name']) AND $_FILES['image']['name'] != '')
@@ -323,6 +324,7 @@ class BackEnd extends MY_Crud{
 			'active'      => isset($_POST['active']) ? 1 : 0,
 			'highlight'   => isset($_POST['highlight']) ? 1: 0,
 			'stock'       => get_post('stock'),
+			'products_related' => json_encode(explode(',', get_post('products_related'))),
  		);
 
 		if(isset($_FILES['image']['name']) AND $_FILES['image']['name'] != '')

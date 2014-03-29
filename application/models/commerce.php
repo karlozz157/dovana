@@ -173,15 +173,40 @@ class Commerce extends MY_Crud{
 	/**
 	 *
 	 * @param int $category
-	 * @param int $product
+	 * @return array
 	 */
-	public function getRelatedProducts($category, $product)
+	public function getRelatedProducts($product)
 	{
-		$sql = sprintf('SELECT * FROM product
-			WHERE category = %d
-			AND id != %d
-			LIMIT 0, 6', $category, $product);
-		return $this->executeQuery($sql);
+		$products = array();
+		$count    = 0;
+
+		$sql = sprintf('SELECT products_related AS products
+			FROM product
+			WHERE id = %d', $product);
+
+		$productsRelated = $this->executeQuery($sql);
+		$productsRelated = $productsRelated[0];
+
+
+
+		if(!empty($productsRelated['products']))
+		{
+			foreach(json_decode($productsRelated['products']) as $sku)
+			{
+				$sql = sprintf('SELECT * 
+					FROM product
+					WHERE sku = "%s"', $sku);
+
+				$result = $this->executeQuery($sql);
+				
+				$count++;
+
+				if(!empty($result[0]) and $count < 6)
+					$products[] = $result[0];
+			}
+		}
+
+		return $products;
 	}
 
 	/*** Login ***/

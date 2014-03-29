@@ -28,6 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/site/css/validationEngine.jquery.css">
 
 	<link href="<?php echo base_url(); ?>assets/admin/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/admin/plugins/jquery-tags-input/jquery.tagsinput.css" />
 
 	<!-- END PAGE LEVEL STYLES -->
 	<link rel="shortcut icon" href="favicon.ico" />

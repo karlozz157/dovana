@@ -16,7 +16,7 @@
 </div>
 <div id="right-product">
 	<h1 id="title-product"><?php echo strtoupper($product['name']); ?></h1>
-	<p id="price-product">$<?php echo strtoupper($product['price']); ?></p>
+	<p id="price-product">$<?php echo number_format($product['price'], 2); ?></p>
 	<?php if($product['stock'] > 0): ?>
 	<div id="price-quantity">
 		<p style="margin-right: 10px;">CANTIDAD</p>
@@ -39,18 +39,19 @@
 	<?php endif; ?>
 </div>
 <div class="clear"></div>
-<hr>
+<span class="hr"></span>
 <div id="releated-product">
 	<h2>PRODUCTOS RELACIONADOS</h2>
 	<div>
-		<?php foreach ($products as $product): ?>
+		<?php foreach ($products as $i => $product): ?>
 			<a href="<?php echo base_url(); ?>site/product/<?php echo $product['id']; ?>">
-				<?php $image = substr($product['image'], 0, strrpos($product['image'], '.')).'_145x145'.substr($product['image'], strrpos($product['image'], '.')); ?>
-				<img src="<?php echo base_url(); ?>assets/media/img/145x145/<?php echo $image; ?>" class="thumb-product">
+				<?php $image = substr($product['image'], 0, strrpos($product['image'], '.')).'_180x180'.substr($product['image'], strrpos($product['image'], '.')); ?>
+				<img src="<?php echo base_url(); ?>assets/media/img/180x180/<?php echo $image; ?>" class="thumb-product" style="margin:<?php echo 4 == $i ? '0' : ''; ?>;">
 			</a>
 		<?php endforeach ?>
 	</div>			
 </div>
+<span class="hr"></span>
 <div class="clear"></div>
 <script type="text/javascript">
 	$('.preview-image').live('click', function()

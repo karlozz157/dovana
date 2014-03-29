@@ -61,19 +61,19 @@
 			<div class="control-group">
 				<label class="control-label"><span class="required">*</span> SKU</label>
 				<div class="controls">
-					<input type="text" name="sku" class="span4 validate[required] m-wrap">
+					<input type="text" name="sku" class="span3 validate[required] m-wrap">
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label"><span class="required">*</span> Precio</label>
 				<div class="controls">
-					<input name="price" class="m-wrap span2 validate[required[custom[number]]]" type="text">
+					<input name="price" class="m-wrap span3 validate[required[custom[number]]]" type="text">
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label"><span class="required">*</span> Articulos en Stock</label>
 				<div class="controls">
-					<input name="stock" class="m-wrap span2 validate[required[custom[number]]]" type="text">
+					<input name="stock" class="m-wrap span3 validate[required[custom[number]]]" type="text">
 				</div>
 			</div>				
 			<div class="control-group">
@@ -103,11 +103,19 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label class="control-label">Productos Relacionados</label>
+				<div class="controls">
+					<input id="tags_1" name="products_related" type="text" class="m-wra tags" style="display: none;">
+				</div>
+			</div>
+			<!--
+			<div class="control-group">
 				<label class="control-label">Producto Destacado</label>
 				<div class="controls">
 					<input type="checkbox" name="highlight" id="highlight" value="1">
 				</div>
-			</div>				
+			</div>
+			-->	
 			<div class="form-actions">
 				<button type="submit" class="btn blue">Guardar</button>
 				<a href="<?php echo base_url(); ?>admin/product_list" class="btn" >Cancelar</a>                           

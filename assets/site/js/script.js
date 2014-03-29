@@ -12,7 +12,7 @@ var envolturas = function()
 			 envoltura = '';
 			for(var i = 0; i < envolturas.length; i ++)
 			{
-				envoltura += '<option value="'+envolturas[i]['price']+'">'+envolturas[i]['name'].toUpperCase()+' -- $'+envolturas[i]['price']+'.00 </option>';
+				envoltura += '<option value="'+envolturas[i]['price']+'">'+envolturas[i]['name'].toUpperCase()+'</option>';
 			}
 		}
 	});	
@@ -32,12 +32,16 @@ var Cart = function()
 			var cart  = items[item];
 			var total = (parseFloat(cart.productPrice) + cart.productEnvoltura) * parseInt(cart.productQuantity);
 			maxTotal += total;
-			
+
 			//var string
 			var products = '';
 
+			//thead
+			products += '<tr><td rowspan="2"><img src="'+base_url+'assets/media/img/'+cart.productImage+'" style="display:inline-block;float:left;height:100px;width:100px;" /></td><td class="thead">PRODUCTO</td><td class="thead">CÓDIGO</td><td class="thead">PRECIO</td><td class="thead">CANTIDAD</td><td class="thead">ENVOLTURA</td><td class="thead">TOTAL</td></tr>';
+
+
 			//name
-			products += '<tr><td><img src="'+base_url+'assets/media/img/'+cart.productImage+'" style="display:inline-block;height:100px;width:100px;" /><br />'+cart.productName+'</td>';
+			products += '<tr><td>'+cart.productName+'</td>';
 			
 			//sku
 			products += '<td>'+cart.productSKU+'</td>';
@@ -58,8 +62,10 @@ var Cart = function()
 			products += '</select></td>';
 
 			//total
-			products += '<td>$'+total+'.00<a class="remove-cart" data-item="'+item+'" href="#"><span>ELIMINAR</span></a></td></tr>';
+			products += '<td><div>$'+total+'.00</div><a class="remove-cart" data-item="'+item+'" href="#"><span>ELIMINAR</span></a></td></tr>';
 			
+			products += '<tr class="line"><td colspan="7"></td></tr>';
+
 			//append de products to the table
 			$('#list-cart').append(products);
 
@@ -95,7 +101,7 @@ var Cart = function()
 			event.preventDefault();        	
         	var element = $(this);
 
-			alertify.confirm('Agregar a mi carrito de compras', function (e)
+			alertify.confirm('', function (e)
 			{
 				if (e)
 				{

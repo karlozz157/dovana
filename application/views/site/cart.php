@@ -1,16 +1,6 @@
 <div id="wrapper-cart" >
     <h1>TU PEDIDO</h1>
     <table id="products-cart" class="table-products">
-        <thead>
-            <tr>
-                <th>PRODUCTO</th>
-                <th>CÓDIGO</th>
-                <th>PRECIO</th>
-                <th>CANTIDAD</th>
-                <th>ENVOLTURA</th>
-                <th>TOTAL</th>
-            </tr>
-        </thead>
 		<tbody id="list-cart"></tbody>
 	</table>                               
     <div class="clearfix">	
