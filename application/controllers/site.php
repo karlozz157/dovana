@@ -228,4 +228,9 @@ class Site extends CI_Controller {
 		unset($_SESSION['lastIdPurchase']);
 		redirect(base_url().'site/index');
 	}
+
+	public function nosotros()
+	{
+		$this->view('nosotros');
+	}
 }

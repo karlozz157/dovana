@@ -1029,3 +1029,28 @@ input, textarea, button
 	display: inline-block;
 	font-size: 55px;
 }
+#nosotros
+{
+	text-align: center;
+}
+#nosotros img
+{
+	width: 100%;
+}
+#nosotros-text
+{
+	color: #333F48;
+	font-family: 'Brandon Grotesque Bold';
+	font-size: 22px;
+}
+#nosotros-text span
+{
+	display: block;
+}
+#nosotros-text span a
+{
+	color: #333F48;
+	font-family: 'Brandon Grotesque Bold';
+	font-size: 42px;
+	text-decoration: none;
+}
