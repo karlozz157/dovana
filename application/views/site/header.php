@@ -22,7 +22,7 @@
 					<tr>
 						<td id="contact-table-header">
 							<img src="<?php echo base_url(); ?>assets/site/images/icon-tel.png" id="icon-tel">
-							<a href="<?php echo base_url(); ?>site/contacto">CONTACTO</a>
+							<a href="<?php echo base_url(); ?>site/contacto" style="font-family: 'Brandon Grotesque Bold';">CONTACTO</a>
 						</td>
 						<td id="cart-table-header" rowspan="2" style="border-left: 1px solid #4B565C;">
 							<img src="<?php echo base_url(); ?>assets/site/images/icon-cart.png" id="cart-image">

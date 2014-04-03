@@ -25,7 +25,11 @@
 				<?php $image = substr($product['image'], 0, strrpos($product['image'], '.')).'_250x250'.substr($product['image'], strrpos($product['image'], '.')); ?>
 				<img src="<?php echo base_url(); ?>assets/media/img/250x250/<?php echo $image; ?>" class="images-product-category">	
 				<span class="description-product-category">
-					<?php echo strtoupper($product['name']); ?>
+					<?php $name = strtoupper($product['name']);
+						if('SIN TITULO' != substr($name, 0, 10))
+							echo $name;
+
+					 ?>
 					<span>
 						$<?php echo number_format($product['price'], 2); ?></span>
 				</span>

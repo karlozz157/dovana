@@ -9,7 +9,7 @@
 			<input type="password" name="password" class="validate[required]" placeholder="CONTRASEÑA" value="<?php echo isset($_COOKIE['password-login'])?$_COOKIE['password-login']:''; ?>"/>
 			<div><input type="checkbox" style="display: inline-block; vertical-align: top; width: 20px;" name="remember-data" value="1"> <span style="display: inline-block;">RECORDAR MIS DATOS</span></div>
 			<div>
-				<a href="" style="float: left; font-size: 10pt;">¿Olvidaste tu contraseña?</a>
+				<a href="" style="color: #444F51; font-family: 'Brandon Grotesque Medium'; font-style: italic; float: left; font-size: 10pt;">¿Olvidaste tu contraseña?</a>
 				<button type="submit" class="btn" style="float: right;">
 					<span>ENTRAR</span>
 				</button>
@@ -55,7 +55,7 @@
 			<div>
 				<div style="float: left;">
 					<input type="checkbox" name="newsletter" value="1"/>
-					<span style="font-size: 10pt;">Deseo recicibir información de promociones y el<br /> Newsletter de Donavan</span>
+					<span style="font-family: 'Brandon Grotesque Medium'; font-style: italic; font-size: 10pt;">Deseo recicibir información de promociones y el Newsletter de Donavan</span>
 				</div>
 
 			<button type="submit" class="btn" style="float: right;">

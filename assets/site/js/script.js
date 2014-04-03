@@ -37,7 +37,7 @@ var Cart = function()
 			var products = '';
 
 			//thead
-			products += '<tr><td rowspan="2"><img src="'+base_url+'assets/media/img/'+cart.productImage+'" style="display:inline-block;float:left;height:100px;width:100px;" /></td><td class="thead">PRODUCTO</td><td class="thead">CÓDIGO</td><td class="thead">PRECIO</td><td class="thead">CANTIDAD</td><td class="thead">ENVOLTURA</td><td class="thead">TOTAL</td></tr>';
+			products += '<tr><td rowspan="2"><img src="'+base_url+'assets/media/img/'+cart.productImage+'" style="display:inline-block;float:left;height:140px;margin-top:-10px;margin-bottom: 10px;vertical-align:top;width:140px;" /></td><td class="thead">PRODUCTO</td><td class="thead">CÓDIGO</td><td class="thead">PRECIO</td><td class="thead">CANTIDAD</td><td class="thead">ENVOLTURA</td><td class="thead">TOTAL</td></tr>';
 
 
 			//name

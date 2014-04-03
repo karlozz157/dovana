@@ -47,7 +47,7 @@ body
 
 input, textarea, button
 {
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	outline: none;
 }
 
@@ -155,7 +155,7 @@ input, textarea, button
 #info-header table a
 {
 	color: #4B565C;
-	font-family:  'Brandon Grotesque Thin';
+	font-family:  'Brandon Grotesque Medium';
 	font-size: 12px;
 	text-decoration: none;
 }
@@ -253,8 +253,8 @@ input, textarea, button
 {
 	color: #333F48;
 	display: block;
-	font-family: 'Brandon Grotesque Thin';
-	font-size: 9.52pt;
+	font-family: 'Brandon Grotesque Medium';
+	font-size: 9pt;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 5px 18px;
@@ -292,7 +292,7 @@ input, textarea, button
 .submenu li a
 {
 	color: #333F48;
-	font-family: 'Brandon Grotesque Thin';	
+	font-family: 'Brandon Grotesque Medium';	
 	font-size: 12px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -350,7 +350,7 @@ input, textarea, button
 #menu-sidebar-category li a
 {
 	color: #333F48;
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 8pt;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -404,10 +404,10 @@ input, textarea, button
 
 #images-title-category
 {
+	color: #444F51;
 	background: rgba(115, 120, 124, .2);
-	font-family: 'Brandon Grotesque Bold';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 11pt;
-	font-weight: bold;
 	margin: 20px 0;
 	text-align: center;
 	padding: 5px 0px;	
@@ -469,7 +469,7 @@ input, textarea, button
 .description-product-category span
 {
 	display: block;
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	margin-top: 5px;
 }
 /*** product ***/
@@ -524,7 +524,7 @@ input, textarea, button
 #title-product
 {
 	font-family: 'Brandon Grotesque Medium';	
-	font-size: 27.42pt;	
+	font-size: 24pt;	
 	font-weight: bold;
 	margin: 0;
 	text-transform: uppercase;
@@ -561,7 +561,7 @@ input, textarea, button
 
 #description-product p
 {
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 12pt;
 	line-height: 18px;
 }
@@ -611,7 +611,7 @@ input, textarea, button
 {
 	display: inline-block;
 	height: 180px;
-	margin: 0 25px 0 0;
+	margin: 0 28px 0 0;
 	vertical-align: top;
 	width: 180px;
 }
@@ -670,6 +670,7 @@ input, textarea, button
 #content-contacto button span
 {
 	border: 1px solid #4B565C;
+	font-family: 'Brandon Grotesque Bold';		
 	display: block;
 	padding: 7px 10px;
 }
@@ -719,7 +720,10 @@ input, textarea, button
 {
 	margin-bottom: 25px;
 }
-
+#content-login button span
+{
+	font-family: 'Brandon Grotesque Bold';
+}
 
 .btn
 {
@@ -739,7 +743,6 @@ input, textarea, button
 /*** General styles for tables cart, checkout ***/
 .table-products
 {
-	font-size: 12px;
 	text-align: center;
 	width: 100%;
 }
@@ -752,9 +755,9 @@ input, textarea, button
 
 .table-products tbody td
 {
-	font-size: 9pt;
+	font-family: 'Brandon Grotesque Bold';
 	text-align: center;
-	padding: 10px 0px;
+	padding: 5px 0px;
 }
 
 /*** Cart ***/
@@ -768,7 +771,7 @@ input, textarea, button
 }
  #products-cart td
 {
-	font-size: 11pt;
+	font-size: 9pt;
 	text-transform: uppercase;
 	width: 170px;
 }
@@ -776,7 +779,6 @@ input, textarea, button
 .thead
 {
 	background: rgba(115, 120, 124, .18);
-	font-family: 'Brandon Grotesque Thin';
 }
 
 .line
@@ -830,6 +832,7 @@ input, textarea, button
 {
 	border: 1px solid #4B565C;
 	display: block;
+		font-family: 'Brandon Grotesque Bold';
 	padding: 7px;
 }
 /*** checkout ***/
@@ -874,7 +877,7 @@ input, textarea, button
 }
 #address-checkout p, #message-checkout p
 {
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 9pt;	
 }
 #address-checkout 
@@ -884,14 +887,14 @@ input, textarea, button
 }
 #address-checkout p
 {
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 9pt;		
 	margin-bottom: 25px;
 }
 #address-checkout label
 {
 	font-size: 9pt;
-	font-family: 'Brandon Grotesque Thin';	
+	font-family: 'Brandon Grotesque Medium';	
 	display: inline-block;
 	margin-right: 15px;
 	text-transform: uppercase;
@@ -901,7 +904,7 @@ input, textarea, button
 #address-checkout input, #address-checkout select
 {
 	border: 1px solid #ccc;
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 9pt;		
 	padding: 6px;
 	width: 250px;
@@ -934,7 +937,7 @@ input, textarea, button
 #message-checkout input
 {
 	border: 1px solid #ccc;
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 9pt;		
 	padding: 6px;	
 	width: 150px;
@@ -943,7 +946,7 @@ input, textarea, button
 #message-checkout textarea
 {
 	border: 1px solid #ccc;
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 9pt;		
 	height: 200px;
 	resize: none;
@@ -980,7 +983,7 @@ input, textarea, button
 	float: left;
 	display: inline-block;
 	margin: 0px 0px;
-	padding: 0px 45px;
+	padding: 0px 20px;
 	vertical-align: top;
 }	
 
@@ -992,14 +995,18 @@ input, textarea, button
 #footer ul li a
 {
 	color: #fff;
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 8pt;
 	text-transform: uppercase;
 	text-decoration: none;
 }
+#alertify
+{
+	margin-top: 100px;
+}
 .alertify-dialog
 {
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-size: 18px;
 	text-align: center;
 }
