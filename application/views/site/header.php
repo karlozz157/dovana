@@ -43,7 +43,7 @@
 				<div id="search">
 					<form method="get" action="<?php echo base_url(); ?>site/search">
 						<img src="<?php echo base_url(); ?>assets/site/images/icon-search.png">
-						<input  type="text" name="q"/>
+						<input  type="text" name="q" value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>"/>
 					</form>
 				</div>
 			</div>

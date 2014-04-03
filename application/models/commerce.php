@@ -83,7 +83,7 @@ class Commerce extends MY_Crud{
 	 */
 	public function searchProducts($product = null)
 	{
-		$sql = 'SELECT * FROM product WHERE name LIKE "%'.$product.'%"';
+		$sql = 'SELECT * FROM product WHERE name LIKE "%'.$product.'%" OR description LIKE "%'.$product.'%"';
 		return $this->executeQuery($sql);
 	}
 
