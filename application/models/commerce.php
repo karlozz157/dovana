@@ -96,6 +96,7 @@ class Commerce extends MY_Crud{
 	public function getSlider()
 	{
 		$this->setTable('slider');
+		$this->db->order_by('id', 'desc'); 
 		return $this->getAllResults(array('type' => 1));
 	}
 
