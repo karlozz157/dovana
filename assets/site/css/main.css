@@ -449,7 +449,27 @@ input, textarea, button
 	overflow: hidden;
 	text-decoration: none;
 }
-
+.content-images-product-category-search
+{
+	display: inline-block;
+	margin: 0 0 20px 28px;
+	padding: 0;
+	vertical-align: top;
+	text-align: center;
+	overflow: hidden; 
+	width: 180px;
+}
+.content-images-product-category-search .images-product-category
+{
+	height: 180px;
+	width: 180px;
+}
+.content-images-product-category-search a
+{
+	color: #4B565C;
+	overflow: hidden;
+	text-decoration: none;
+}
 /*
 .images-product-category
 {
