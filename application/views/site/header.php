@@ -17,6 +17,9 @@
 	<div id="wrapper">
 		<div id="header">
 			<a href="<?php echo base_url(); ?>site"><img src="<?php echo base_url(); ?>assets/site/images/Logo.png" id="logo"></a>
+			<?php if(false === empty($logged)): ?>
+				<p style="text-align: center; display: inline-block; font-style: italic; font-size: 12pt; margin-left: 120px;">¡BIENVENIDO A DOVANA... <?php echo strtoupper($logged['name']); ?>!</p>
+			<?php endif; ?>
 			<div id="info-header">
 				<table>
 					<tr>
