@@ -63,7 +63,7 @@ fieldset p
 	</div>
 	<div id="checkout-total">	
 		<div class="clear"></div>
-		<span><b>TOTAL: $</b><b id="grand-total-checkout" data-total="<?php echo number_format($maxTotal, 2); ?>"><?php echo number_format($maxTotal, 2); ?><b></span>
+		<span style="font-weight: bold;">TOTAL: $<b id="grand-total-checkout" data-total="<?php echo number_format($maxTotal, 2); ?>"><?php echo number_format($maxTotal, 2); ?><b></span>
 	</div> 
 	<div id="address-checkout">     
 		<h3>DIRECCIÓN DE ENVÍO</h3>
@@ -141,33 +141,59 @@ fieldset p
 <div class="clear"></div>
 
 <script type="text/javascript">
+function number_format(number, decimals, dec_point, thousands_sep) {
+    var n = !isFinite(+number) ? 0 : +number, 
+        prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+        sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+        dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+        s = '',
+        toFixedFix = function (n, prec) {
+            var k = Math.pow(10, prec);
+            return '' + Math.round(n * k) / k;
+        };
+    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+    if (s[0].length > 3) {
+        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    }
+    if ((s[1] || '').length < prec) {
+        s[1] = s[1] || '';
+        s[1] += new Array(prec - s[1].length + 1).join('0');
+    }
+    return s.join(dec);
+}
+
 (function(){
+
+	var checkoutTotal = '<?php echo $maxTotal; ?>';
+
+	function getIva()
+	{
+		var iva    = $('#factura').attr('data-iva');
+		var result = 0;
+
+		if(true === $('#factura')[0].checked)
+			result = (parseFloat(iva)/100 * parseFloat(checkoutTotal)) + parseFloat(checkoutTotal);
+		else
+			result = ((parseFloat(iva)/100 * parseFloat(checkoutTotal)) + parseFloat(checkoutTotal)) - (parseFloat(iva)/100 * parseFloat(checkoutTotal));		
+		
+		return result;
+	}
 
 	$('#factura').live('click', function()
 	{
-		var iva     = $(this).attr('data-iva');
-		var total   = $('#grand-total-checkout');
-		var resullt = 0;
-
-		if(true === $(this)[0].checked)
-		{
-			result = parseFloat(iva)/100 * parseFloat(total.text()) + parseFloat(total.text());
-		}
-		else
-		{
-			result = total.attr('data-total');
-		}
-
-		total.html(result);
+		var result    = getIva();
+		var envoltura = parseFloat($($('#sending')[0][$('#sending')[0].selectedIndex]).attr('data-price'));
+		$('#checkout-total span b').html(number_format(result + envoltura) + '.00');
 	});
 
-	var checkoutTotal = $('#checkout-total span b');
-	localStorage.checkoutTotal = checkoutTotal.text();
 
 	$('#sending').live('change', function()
-	{
-		var price = $($(this)[0][$(this)[0].selectedIndex]).attr('data-price')
-		checkoutTotal.html(parseFloat(localStorage.checkoutTotal) + parseFloat(price));
+	{	
+		var envoltura = parseFloat($($(this)[0][$(this)[0].selectedIndex]).attr('data-price'));
+		var factura   = getIva();
+		$('#checkout-total span b').html(number_format(envoltura + factura) + '.00');
 	});
+
 })();
 </script>
