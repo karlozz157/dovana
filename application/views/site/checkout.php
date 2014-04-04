@@ -47,54 +47,61 @@ fieldset p
 	</table>
 	<form  onsubmit="return $(this).validationEngine('validate');" method="post" action="<?php echo base_url(); ?>cart/paypal" id="checkout-form-action" class="validate-form">
 	<div class="clear"></div>
-	<div id="checkout-total">	
-		<select name="sending" id="sending" style="float: right; display: block; margin-top: 15px;">
-				<option value="0" data-price="0">SELECCIONE UNO</option>
+	<div id="checkout-send">
+		<span style="background: #4B565C; color: #D1CBC3; float: left; font-family: 'Brandon Grotesque Bold'; font-size: 16px; display: block; text-align: right; vertical-align: top; padding: 5px 10px 5px 0; width: 100px;">ENVÍO</span>
+		<select name="sending" id="sending" style="float: left; display: block; vertical-align: top; height: 31px;">
+				<option value="0" data-price="0">SELECCIONA UNO</option>
 			<?php foreach ($sending as $send): ?>
 				<option value="<?php echo $send['id']; ?>" data-price="<?php echo $send['price']; ?>"><?php echo $send['name']; ?></option>
 			<?php endforeach ?>
 		</select>
-		<span style="float: right; display: block; width: 100px; margin-right: 25px;">ENVÍO</span>
 		<div class="clear"></div>
-		<span>TOTAL: $<b id="grand-total-checkout" data-total="<?php echo number_format($maxTotal, 2); ?>"><?php echo number_format($maxTotal, 2); ?><b></span>
+		<div style="font-style: italic; margin-top: 10px;">
+			* Recuerda que sólo se puede mandar a una sóla dirección. Si tienes varios regalos que hacer y<br />
+			mandarlos a diferentes direcciones debes hacer tus compras por separado.
+		</div>
+	</div>
+	<div id="checkout-total">	
+		<div class="clear"></div>
+		<span><b>TOTAL: $</b><b id="grand-total-checkout" data-total="<?php echo number_format($maxTotal, 2); ?>"><?php echo number_format($maxTotal, 2); ?><b></span>
 	</div> 
 	<div id="address-checkout">     
 		<h3>DIRECCIÓN DE ENVÍO</h3>
 			<p>
-			    <label for="mail"><span>*</span> Estado:</label>
+			    <label for="mail"><span>*</span> Estado</label>
 				<select id="estado" name="estado" class="validate[required]">
 					<option value>SELECCIONE UNO</option>
 				</select>
 			</p>
 			<p>
-			    <label for="password"><span>*</span> Municipio:</label>
+			    <label for="password"><span>*</span> Municipio</label>
 				<select id="municipio" name="municipio" class="validate[required]">
 					<option value>SELECCIONE UNO</option>
 				</select>
 			</p> 
 			<p>
-			    <label for="re-password"><span>*</span> Colonia:</label>
+			    <label for="re-password"><span>*</span> Colonia</label>
 				<input type="text" id="colonia" name="colonia" class="validate[required] text" maxlength="25">
 			</p>
 			<p>
-			    <label for="l-name"><span>*</span> Codigo Postal:</label>
+			    <label for="l-name"><span>*</span> Codigo Postal</label>
 			    <input type="text" id="codigo_postal" name="codigo_postal" class="validate[required, custom[integer], maxSize[5]] text" maxlength="5">
 			</p>                                     
 			<p>
-			    <label for="f-name"><span>*</span> Calle:</label>
+			    <label for="f-name"><span>*</span> Calle</label>
 			    <input type="text" id="calle" name="calle" class="validate[required] text" maxlength="100">
 			</p>
 			<p>
-			    <label for="l-name"><span>*</span> No Exterior:</label>
+			    <label for="l-name"><span>*</span> No Exterior</label>
 			    <input type="text" id="no_exterior" name="no_exterior" class="validate[required, custom[integer]] text">
 			</p> 
 			<p>
-			    <label for="l-name">No Interior:</label>
+			    <label for="l-name">No Interior</label>
 			    <input type="text" id="no_interior" name="no_interior" class="validate[custom[integer]] text" >
 			</p>
 			<p>
-				<input type="checkbox" name="factura" id="factura" data-iva="<?php echo $config['iva']; ?>" value="1" style="margin-bottom: 25px; width: 25px;"> Necesito Factura
-				<span style="font-size: 9pt;">(Aplica un porcentaje de <?php echo $config['iva']; ?>%)</span>
+				<input type="checkbox" name="factura" id="factura" data-iva="<?php echo $config['iva']; ?>" value="1" style="margin-bottom: 25px; width: 25px;"> 
+				<span style="font-family: 'Brandon Grotesque'; font-style: italic; font-size: 9pt;">Necesito Factura</span>
 				<button type="submit" id="purchase-checkout">
 					<span>COMPRAR</span>
 				</button>

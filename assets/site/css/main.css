@@ -864,6 +864,12 @@ input, textarea, button
 	padding-bottom: 25px;
 	border-bottom: 1px solid #4B565C;
 }
+#checkout-send
+{
+	border-top: 1px solid #4B565C;
+	overflow: hidden;
+	padding-top: 20px;
+}
 
 #description-checkout  th, #description-checkout td
 {
@@ -898,7 +904,7 @@ input, textarea, button
 #address-checkout p, #message-checkout p
 {
 	font-family: 'Brandon Grotesque Medium';
-	font-size: 9pt;	
+	font-size: 12pt;	
 }
 #address-checkout 
 {
@@ -907,14 +913,14 @@ input, textarea, button
 }
 #address-checkout p
 {
-	font-family: 'Brandon Grotesque Medium';
-	font-size: 9pt;		
+	font-family: 'Brandon Grotesque Bold';
+	font-size: 12pt;		
 	margin-bottom: 25px;
 }
 #address-checkout label
 {
-	font-size: 9pt;
-	font-family: 'Brandon Grotesque Medium';	
+	font-size: 8pt;
+	font-family: 'Brandon Grotesque';	
 	display: inline-block;
 	margin-right: 15px;
 	text-transform: uppercase;
@@ -924,8 +930,8 @@ input, textarea, button
 #address-checkout input, #address-checkout select
 {
 	border: 1px solid #ccc;
-	font-family: 'Brandon Grotesque Medium';
-	font-size: 9pt;		
+	font-family: 'Brandon Grotesque';
+	font-size: 8pt;		
 	padding: 6px;
 	width: 250px;
 }
@@ -943,6 +949,7 @@ input, textarea, button
 {
 	border: 1px solid #D1CBC3;
 	display: block;
+	font-family: 'Brandon Grotesque Bold';
 	padding: 7px 14px;
 }
 
@@ -957,8 +964,8 @@ input, textarea, button
 #message-checkout input
 {
 	border: 1px solid #ccc;
-	font-family: 'Brandon Grotesque Medium';
-	font-size: 9pt;		
+	font-family: 'Brandon Grotesque';
+	font-size: 8pt;		
 	padding: 6px;	
 	width: 150px;
 }
@@ -966,9 +973,10 @@ input, textarea, button
 #message-checkout textarea
 {
 	border: 1px solid #ccc;
-	font-family: 'Brandon Grotesque Medium';
-	font-size: 9pt;		
+	font-family: 'Brandon Grotesque';
+	font-size: 8pt;		
 	height: 200px;
+	padding: 5px;
 	resize: none;
 	width: 475px;
 }
