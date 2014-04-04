@@ -19,7 +19,7 @@
 }
 
 .formError {
-	font-family: 'Brandon Grotesque Thin';
+	font-family: 'Brandon Grotesque Medium';
 	font-style: italic;
 	position: absolute;
 	top: 300px;
@@ -27,6 +27,7 @@
 	display: block;
 	cursor: pointer;
 	text-align: left;
+	width: 140px;
 }
 
 .formError.inline {
