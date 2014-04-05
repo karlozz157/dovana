@@ -34,7 +34,8 @@
 
     .details thead th
     {
-        font-size: 13pt;
+        font-family: 'Brandon Grotesque Medium'; 
+        font-size: 9pt;
         font-weight: normal;
         text-transform: uppercase;
         padding: 7px 0px;
@@ -44,8 +45,16 @@
     .details tbody td
     {
         font-size: 10pt;
-        font-family: 'Brandon Grotesque Bold';       
+        font-family: 'Brandon Grotesque Bold';  
+        text-transform: uppercase;     
         padding: 7px 14px;
+    }
+
+    .details-send td
+    {
+        font-family: 'Brandon Grotesque Medium';
+        font-size: 10pt;
+        font-style: italic;
     }
 
     .column-center
@@ -60,14 +69,13 @@
     </style>
 <div id="container-table">
     <table id="table-details-purchase">
+        <tr><td style="font-size: 26pt; font-style: italic; text-transform: uppercase;"><p>Hola <span><?php echo ucwords($user['name']); ?></span></p></td></tr>
+        <tr><td></td></tr>
         <tr>
-            <td style="font-size: 26pt; font-style: italic; text-transform: uppercase;"><p>Hola <span><?php echo ucwords($user['first_name'].' '.$user['last_name']); ?></span></p></td>
+            <td style="font-style: 14pt; font-style: italic;"><p>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</p></td>
         </tr>
         <tr>
-            <td style="font-style: 16pt; font-style: italic;"><p>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</p></td>
-        </tr>
-        <tr>
-            <td>    
+            <td style="border-top: 1px solid #333F48; border-bottom: 1px solid #333F48; padding: 15px 0 0 0;">    
                 <table id="list-product" class="details">
                     <thead>
                         <th>Producto</th>
@@ -89,12 +97,11 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <table class="details">
-                    <thead>
-                        <th colspan="5" style="font-style: italic;">Dirección de Envío:</th>
-                    </thead>
+            <td style="padding-top: 15px;">
+                <table class="details-send">
                     <tbody>
+                        <tr><td style="font-style: italic;">Dirección de Envío:</td></tr>
+                        <tr><td></td></tr>
                         <tr><td><?php echo ucwords($user['first_name'].' '.$user['last_name']); ?></td></tr>
                         <tr><td>México - <?php echo $address['estado']; ?></td></tr>
                         <tr><td><?php echo $address['municipio']; ?> - <?php echo $address['colonia']; ?></td></tr>
@@ -105,15 +112,16 @@
             </td>
         </tr>
         <tr>
-            <table class="details">
-                <thead>
-                    <th>ACUSE DE RECIBO</th>
-                </thead>
-                <tbody>
-                    <tr><td>De: </td></tr>
-                    <tr><td>Para: </td></tr>
-                </tbody>
-            </table>
+            <td>
+                <table class="details details-send">
+                    <tbody>
+                        <tr><td style="font-style: italic;">ACUSE DE RECIBO</td></tr>
+                        <tr><td></td></tr>
+                        <tr><td>De: </td></tr>
+                        <tr><td>Para: </td></tr>
+                    </tbody>
+                </table>
+            </td>
         </tr>
         <tr>
             <td style="text-align: centenr; border-top: 1px solid #ccc; font-size: 22pt; font-style: italic; padding-top: 30px;">
