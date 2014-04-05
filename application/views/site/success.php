@@ -24,7 +24,7 @@
 
     .details
     {
-        width: 680px;
+        width: 700px;
     }
 
     .details thead
@@ -72,7 +72,7 @@
         <tr><td style="font-size: 26pt; font-style: italic; text-transform: uppercase;"><p>Hola <span><?php echo ucwords($user['name']); ?></span></p></td></tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td style="font-style: 14pt; font-style: italic;"><p>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</p></td>
+            <td style="font-style: 14pt; font-style: italic; font-family: 'Brandon Grotesque';"><p>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</p></td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -126,8 +126,9 @@
             </td>
         </tr>
         <tr><td>&nbsp;</td></tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
-            <td style="text-align: center; border-top: 1px solid #ccc; font-size: 22pt; font-style: italic; padding-top: 30px;">
+            <td style="text-align: center; border-top: 1px solid #333F48; font-size: 26pt; font-style: italic; padding-top: 30px;">
                 ¡DOVANA TE AGRADECE TU COMPRA!
             </td> 
         </tr>
