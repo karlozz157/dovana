@@ -2,6 +2,7 @@
     #container-table
     {
         background: #fff;
+        font-family: 'Brandon Grotesque Medium';
         padding: 25px 10px;
         margin-bottom: 25px;
     }
@@ -13,7 +14,6 @@
 
     .text
     {
-        color: #333;
         font-size: 12pt;
     }
 
@@ -24,12 +24,7 @@
 
     .details
     {
-        border: 1px solid #ccc;
         width: 680px;
-    }
-    span
-    {
-        color: rgba(115, 120, 124, .2);
     }
 
     .details thead
@@ -39,9 +34,9 @@
 
     .details thead th
     {
-        color: #000;
         font-size: 13pt;
         font-weight: normal;
+        text-transform: uppercase;
         padding: 7px 0px;
     }
 
@@ -49,11 +44,12 @@
     .details tbody td
     {
         font-size: 10pt;
+        font-family: 'Brandon Grotesque Bold';       
         padding: 7px 14px;
     }
 
     .column-center
-    {
+    {  
         text-align: center;
     }
 
@@ -65,10 +61,10 @@
 <div id="container-table">
     <table id="table-details-purchase">
         <tr>
-            <td class="text"><p>Hola <span><?php echo ucwords($user['first_name'].' '.$user['last_name']); ?></span></p></td>
+            <td style="font-size: 26pt; font-style: italic; text-transform: uppercase;"><p>Hola <span><?php echo ucwords($user['first_name'].' '.$user['last_name']); ?></span></p></td>
         </tr>
         <tr>
-            <td class="text"><p>A continuación encontrarás todos los detalles de tu compra:</p></td>
+            <td style="font-style: 16pt; font-style: italic;"><p>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</p></td>
         </tr>
         <tr>
             <td>    
@@ -96,7 +92,7 @@
             <td>
                 <table class="details">
                     <thead>
-                        <th>Dirección de Envío:</th>
+                        <th colspan="5" style="font-style: italic;">Dirección de Envío:</th>
                     </thead>
                     <tbody>
                         <tr><td><?php echo ucwords($user['first_name'].' '.$user['last_name']); ?></td></tr>
@@ -109,11 +105,19 @@
             </td>
         </tr>
         <tr>
-            <td class="text">
-                <p>
-                    Muchas gracias por comprar en nuestra tienda!<br />
-                    <a href="javascript:window.location.href='<?php echo base_url(); ?>site/'">Aceptar</a>
-                </p>
+            <table class="details">
+                <thead>
+                    <th>ACUSE DE RECIBO</th>
+                </thead>
+                <tbody>
+                    <tr><td>De: </td></tr>
+                    <tr><td>Para: </td></tr>
+                </tbody>
+            </table>
+        </tr>
+        <tr>
+            <td style="text-align: centenr; border-top: 1px solid #ccc; font-size: 22pt; font-style: italic; padding-top: 30px;">
+                ¡DOVANA TE AGRADECE TU COMPRA!
             </td> 
         </tr>
     </table>
