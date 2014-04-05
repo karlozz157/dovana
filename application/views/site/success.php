@@ -52,7 +52,7 @@
 
     .details-send td
     {
-        font-family: 'Brandon Grotesque Medium';
+        font-family: 'Brandon Grotesque';
         font-size: 10pt;
         font-style: italic;
     }
@@ -70,10 +70,11 @@
 <div id="container-table">
     <table id="table-details-purchase">
         <tr><td style="font-size: 26pt; font-style: italic; text-transform: uppercase;"><p>Hola <span><?php echo ucwords($user['name']); ?></span></p></td></tr>
-        <tr><td></td></tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
             <td style="font-style: 14pt; font-style: italic;"><p>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</p></td>
         </tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
             <td style="border-top: 1px solid #333F48; border-bottom: 1px solid #333F48; padding: 15px 0 0 0;">    
                 <table id="list-product" class="details">
@@ -100,8 +101,8 @@
             <td style="padding-top: 15px;">
                 <table class="details-send">
                     <tbody>
-                        <tr><td style="font-style: italic;">Dirección de Envío:</td></tr>
-                        <tr><td></td></tr>
+                        <tr><td style="font-style: italic; font-size: 11pt;">DIRECCIÓN DE ENVÍO</td></tr>
+                        <tr><td>&nbsp;</td></tr>
                         <tr><td><?php echo ucwords($user['first_name'].' '.$user['last_name']); ?></td></tr>
                         <tr><td>México - <?php echo $address['estado']; ?></td></tr>
                         <tr><td><?php echo $address['municipio']; ?> - <?php echo $address['colonia']; ?></td></tr>
@@ -111,20 +112,22 @@
                 </table>
             </td>
         </tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
             <td>
-                <table class="details details-send">
+                <table class="details-send">
                     <tbody>
-                        <tr><td style="font-style: italic;">ACUSE DE RECIBO</td></tr>
-                        <tr><td></td></tr>
+                        <tr><td style="font-style: italic; font-size: 11pt;">ACUSE DE RECIBO</td></tr>
+                        <tr><td>&nbsp;</td></tr>
                         <tr><td>De: </td></tr>
                         <tr><td>Para: </td></tr>
                     </tbody>
                 </table>
             </td>
         </tr>
+        <tr><td>&nbsp;</td></tr>
         <tr>
-            <td style="text-align: centenr; border-top: 1px solid #ccc; font-size: 22pt; font-style: italic; padding-top: 30px;">
+            <td style="text-align: center; border-top: 1px solid #ccc; font-size: 22pt; font-style: italic; padding-top: 30px;">
                 ¡DOVANA TE AGRADECE TU COMPRA!
             </td> 
         </tr>
