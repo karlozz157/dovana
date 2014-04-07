@@ -473,11 +473,15 @@ class Commerce extends MY_Crud{
 				AND purchase.id_user = %d
 				AND purchase.date = "%s"',  $id, $user['id'], $date);
 
+		$sqlMessage = sprintf('SELECT *
+				FROM purchase_message
+				WHERE id_purchase = %d', $id);
 
 		$products = $this->executeQuery($sqlProduct);
 		$address  = $this->executeQuery($sqlAddress);
+		$message  = $this->executeQuery($sqlMessage);
 
-		return array('products' => $products, 'user' => $user, 'address' => $address[0]);
+		return array('products' => $products, 'user' => $user, 'address' => $address[0], 'message' => isset($message[0]) ? $message[0] : null);
 	}
 
 	public function getPurchase()

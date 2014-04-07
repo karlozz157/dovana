@@ -119,8 +119,8 @@
                     <tbody>
                         <tr><td style="font-style: italic; font-size: 11pt;">ACUSE DE RECIBO</td></tr>
                         <tr><td>&nbsp;</td></tr>
-                        <tr><td>De: </td></tr>
-                        <tr><td>Para: </td></tr>
+                        <tr><td>De: <?php echo $message['from_name']; ?></td></tr>
+                        <tr><td>Para: <?php echo $message['to_name']; ?></td></tr>
                     </tbody>
                 </table>
             </td>

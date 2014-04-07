@@ -264,8 +264,9 @@ class Cart extends CI_Controller {
 					$array    = $this->commerce->getLastPurchase();
 					$products = $array['products'];
 					$address  = $array['address'];
+					$message  = $array['message'];
 					$user     = $array['user'];
-					$this->view('success', array('products' => $products, 'user' => $user, 'address' => $address));
+					$this->view('success', array('products' => $products, 'user' => $user, 'address' => $address, 'message' => $message));
 				
 
 
