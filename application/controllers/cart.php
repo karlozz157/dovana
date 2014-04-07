@@ -268,7 +268,7 @@ class Cart extends CI_Controller {
 					$sending  = $array['sending'];
 					$user     = $array['user'];
 
-					$this->view('success', array('products' => $products, 'user' => $user, 'address' => $address, 'message' => $message, 'sending' => $sending;));
+					$this->view('success', array('products' => $products, 'user' => $user, 'address' => $address, 'message' => $message, 'sending' => $sending));
 				
 
 
