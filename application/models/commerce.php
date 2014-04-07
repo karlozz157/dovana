@@ -477,11 +477,17 @@ class Commerce extends MY_Crud{
 				FROM purchase_message
 				WHERE id_purchase = %d', $id);
 
+		$sqlSending = sprintf('SELECT  name, price FROM purchase
+				INNER JOIN sending
+				ON purchase.id_sending = sending.id
+				WHERE purchase.id = %d', $id);
+
 		$products = $this->executeQuery($sqlProduct);
 		$address  = $this->executeQuery($sqlAddress);
 		$message  = $this->executeQuery($sqlMessage);
+		$sending  = $this->executeQuery($sqlSending);
 
-		return array('products' => $products, 'user' => $user, 'address' => $address[0], 'message' => isset($message[0]) ? $message[0] : null);
+		return array('products' => $products, 'user' => $user, 'address' => $address[0], 'message' => isset($message[0]) ? $message[0] : null, 'sending' => isset($sending[0]) ? $sending[0] : null);
 	}
 
 	public function getPurchase()

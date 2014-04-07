@@ -3,7 +3,7 @@
         <tr><td id="welcome-details-purchase-success">Hola <?php echo ucwords($user['name']); ?></td></tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
-            <td>A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</td>
+            <td style="font-style: italic;">A CONTINUACIÓN ENCONTRARÁS LOS DETALLES DE TU COMPRA...</td>
         </tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
@@ -11,16 +11,18 @@
                 <table id="list-product-details-purchase-success" class="details-purchase-success">
                     <thead>
                         <th>Producto</th>
-                        <th>Cantidad</th>
                         <th>Precio Unitario</th>
+                        <th>Cantidad</th>
+                        <th>Envoltura</th>
                         <th>Precio Total</th>
                     </thead>
                     <tbody>
                         <?php foreach ($products as $product): ?>
                             <tr>
                                 <td><?php echo $product['name']; ?></td>
-                                <td class="column-center-details-purchase-success"><?php echo $product['quantity']; ?></td>
                                 <td class="column-center-details-purchase-success">$<?php echo $product['unit_price']; ?></td>
+                                <td class="column-center-details-purchase-success"><?php echo $product['quantity']; ?></td>
+                                <td class="column-center-details-purchase-success"><?php echo $sending['name']; ?></td>
                                 <td class="column-center-details-purchase-success">$<?php echo $product['total_price']; ?></td>
                             </tr>
                         <?php endforeach; ?>
@@ -55,7 +57,7 @@
                 </table>
             </td>
         </tr>
-        <tr><td style="font-family: 'Brandon Grotesque'; font-size: 10pt;font-style: italic; text-align: right;">En breve te enviaremos tu factura a tu mail.</td></tr>
+        <tr><td style="font-family: 'Brandon Grotesque'; font-size: 11pt;font-style: italic; text-align: right;">En breve te enviaremos tu factura a tu mail.</td></tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
             <td style="text-align: center; border-top: 1px solid #333F48; font-size: 26pt; font-style: italic; padding-top: 30px;">
