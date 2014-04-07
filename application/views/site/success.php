@@ -29,7 +29,7 @@
             </td>
         </tr>
         <tr>
-            <td style="background: url('<?php echo base_url(); ?>/assets/site/images/logo-pajarito.png') no-repeat; background-position: center;  padding-top: 15px;">
+            <td style="background: url('<?php echo base_url(); ?>/assets/site/images/logo-pajarito.png') no-repeat; background-position: center; background-size: 30%; padding-top: 15px;">
                 <table class="details-send">
                     <tbody>
                         <tr><td style="font-style: italic; font-size: 11pt;">DIRECCIÓN DE ENVÍO</td></tr>
@@ -55,7 +55,7 @@
                 </table>
             </td>
         </tr>
-        <tr><td style="text-align: right;">En breve te enviaremos tu factura a tu mail.</td></tr>
+        <tr><td style="font-family: 'Brandon Grotesque'; font-size: 10pt;font-style: italic; text-align: right;">En breve te enviaremos tu factura a tu mail.</td></tr>
         <tr><td>&nbsp;</td></tr>
         <tr>
             <td style="text-align: center; border-top: 1px solid #333F48; font-size: 26pt; font-style: italic; padding-top: 30px;">
