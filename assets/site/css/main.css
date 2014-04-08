@@ -1076,7 +1076,7 @@ input, textarea, button
 {
 	color: #333F48;
 	font-family: 'Brandon Grotesque Bold';
-	font-size: 22px;
+	font-size: 21px;
 }
 #nosotros-text span
 {
@@ -1085,8 +1085,8 @@ input, textarea, button
 #nosotros-text span a
 {
 	color: #333F48;
+	font-size: 32px;
 	font-family: 'Brandon Grotesque Bold';
-	font-size: 42px;
 	text-decoration: none;
 }
 
