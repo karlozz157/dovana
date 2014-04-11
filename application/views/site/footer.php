@@ -21,8 +21,10 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/script.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
+			var objHeight=$(window).height()-100; // reduce 100, so that it will fit in the container
 
-$('.lightbox').colorbox();
+
+			$('.lightbox').colorbox({width: "850px", height: objHeight, iframe: true,);
 
 			$( "#datepicker" ).datepicker();
 			
