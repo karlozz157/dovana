@@ -97,6 +97,12 @@
 				</div>
 			</div>								
 			<div class="control-group">
+				<label class="control-label">Lightbox</label>
+				<div class="controls">
+					<input type="checkbox" name="lightbox" id="lightbox" value="1">
+				</div>
+			</div>
+			<div class="control-group">
 				<label class="control-label">Status</label>
 				<div class="controls">
 					<input type="checkbox" name="active" id="active" value="1">

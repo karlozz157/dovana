@@ -17,9 +17,12 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/alertify.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jssor.slider.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/script.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
+
+$('.lightbox').colorbox();
 
 			$( "#datepicker" ).datepicker();
 			

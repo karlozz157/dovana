@@ -107,6 +107,12 @@
 				</div>
 			</div>														
 			<div class="control-group">
+				<label class="control-label">Lightbox</label>
+				<div class="controls">
+					<input type="checkbox" name="lightbox" <?php echo 1 == $product['lightbox']?'checked':''; ?> value="1">
+				</div>
+			</div>
+			<div class="control-group">
 				<label class="control-label">Status</label>
 				<div class="controls">
 					<input type="checkbox" name="active" <?php echo 1 == $product['active']?'checked':''; ?> value="1">

@@ -21,7 +21,8 @@
 	<h2 id="images-title-category">GALERÍA DE PRODUCTOS</h2>
 	<div id="content-products-gategory">
 		<?php foreach ($products as $i => $product): ?>
-			<div class="content-images-product-category <?php echo ($i%3 == 1) ? 'margin' : '' ?>"><a href="<?php echo base_url(); ?>site/product/<?php echo $product['id']; ?>">
+			<div class="content-images-product-category <?php echo ($i%3 == 1) ? 'margin' : '' ?>">
+				<a href="<?php echo base_url(); ?><?php if($product['lightbox'] == 0):  ?>site/product/<?php echo $product['id']; ?><?php else: ?>assets/media/img/<?php echo $product['image']; ?><?php endif; ?>" class="<?php echo $product['lightbox'] == 1 ? 'lightbox' : '' ?>">
 				<?php $image = substr($product['image'], 0, strrpos($product['image'], '.')).'_250x250'.substr($product['image'], strrpos($product['image'], '.')); ?>
 				<img src="<?php echo base_url(); ?>assets/media/img/250x250/<?php echo $image; ?>" class="images-product-category">	
 				<span class="description-product-category">
