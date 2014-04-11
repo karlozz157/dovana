@@ -24,7 +24,7 @@
 			var objHeight=$(window).height()-100; // reduce 100, so that it will fit in the container
 
 
-			$('.lightbox').colorbox({width: "850px", height: objHeight, iframe: true,);
+			$('.lightbox').colorbox({width: "850px", height: objHeight, iframe: true});
 
 			$( "#datepicker" ).datepicker();
 			
