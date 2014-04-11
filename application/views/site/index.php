@@ -1,4 +1,4 @@
-<img src="<?php echo base_url(); ?>assets/site/images/title-index.png" style="margin: auto; display: block; width: 600px">
+<img src="<?php echo base_url(); ?>assets/site/images/title-index.png" style="margin: 0px auto 25px auto; display: block; width: 600px">
 
 <?php if($sliders): ?>
 <div style="border: 1px solid #73787C; padding: 10px;">

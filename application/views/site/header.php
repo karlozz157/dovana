@@ -18,7 +18,7 @@
 		<div id="header">
 			<a href="<?php echo base_url(); ?>site"><img src="<?php echo base_url(); ?>assets/site/images/Logo.png" id="logo"></a>
 			<?php if(false === empty($logged)): ?>
-				<p style="text-align: center; display: inline-block; font-style: italic; font-size: 12pt; margin-left: 120px;">¡BIENVENIDO A DOVANA... <?php echo strtoupper($logged['name']); ?>!</p>
+				<p style="text-align: center; display: inline-block; font-style: italic; font-size: 12pt; margin-left: 120px; margin-top: 35px;">¡BIENVENIDO A DOVANA... <?php echo strtoupper($logged['name']); ?>!</p>
 			<?php endif; ?>
 			<div id="info-header">
 				<table>
@@ -36,9 +36,9 @@
 					<tr>
 						<td id="login-table-header">
 							<?php if(true === empty($logged)): ?>
-								<a href="<?php echo base_url(); ?>site/cart">ENTRAR // REGISTRATE</a>
+								<a href="<?php echo base_url(); ?>site/cart" style="display: block; margin-top: 5px;">ENTRAR // REGISTRATE</a>
 							<?php else: ?>
-								<a href="<?php echo base_url(); ?>site/logout">CERRAR SESIÓN</a>
+								<a href="<?php echo base_url(); ?>site/logout" style="display: block; margin-top: 5px;">CERRAR SESIÓN</a>
 							<?php endif; ?>
 						</td>
 					</tr>
