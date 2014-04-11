@@ -3,7 +3,7 @@
 			<ul>
 				<li><a href="#">2014 DOVANA // DERECHOS RESERVADOS</a></li>
 				<li><a href="<?php echo base_url(); ?>site/nosotros" target="_blank">¿QUIÉNES SOMOS?</a></li>
-				<li><a href="#">AVISO PRIVACIDAD // CAMBIOS Y DEVOLUCIONES</a></li>
+				<li><a href="<?php echo base_url(); ?>site/aviso_privacidad_cambios_devoluciones" target="_blank">AVISO PRIVACIDAD // CAMBIOS Y DEVOLUCIONES</a></li>
 				<li><a href="#">POLÍTICAS DE ENVÍOS</a></li>
 				<li><a href="#">SIGUENOS EN </a></li>
 			</ul>

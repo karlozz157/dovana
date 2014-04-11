@@ -233,4 +233,9 @@ class Site extends CI_Controller {
 	{
 		$this->view('nosotros');
 	}
+
+	public function aviso_privacidad_cambios_devoluciones()
+	{
+		$this->view('aviso_privacidad_cambios_devoluciones');
+	}
 }
