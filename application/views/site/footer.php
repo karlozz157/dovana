@@ -17,14 +17,35 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/alertify.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jssor.slider.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jquery-ui-1.10.4.custom.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/site/js/script.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
-			var objHeight=$(window).height()-100; // reduce 100, so that it will fit in the container
 
+			$('.lightbox').click(function()
+			{
+				var src = $(this).attr('href');
 
-			$('.lightbox').colorbox({width: "850px", height: objHeight});
+				$('body').append('<div id="content-lightbox"><div><img src="'+base_url+'assets/site/images/close-icon.png" id="close-lightbox" /><img src="'+src+'" id="image-lightbox"/><span>* Para comprar esta obra favor de ir decoración para el hogar // arte</span></div></div>');
+
+				//implement a callback
+				setTimeout(function()
+				{
+					var height = $('#image-lightbox').height();
+					var width  = $('#image-lightbox').width();
+
+					$('#image-lightbox').css(
+					{
+						height     : height/6,
+						width      : width/6,
+					}).parent().parent().css('visibility', 'visible');
+
+				}, 500);
+			});
+
+			$('#close-lightbox').live('click', function()
+			{
+				$('#content-lightbox').remove();
+			});
 
 			$( "#datepicker" ).datepicker();
 			

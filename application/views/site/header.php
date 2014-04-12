@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/site/css/alertify.core.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/site/css/alertify.default.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/site/css/ui-lightness/jquery-ui-1.10.4.custom.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/site/css/colorbox.css" />
 	<script type="text/javascript" src="http://karlozz157.com/projects/commerce/assets/site/js/jquery-1.6.2.min.js"></script>
 	<script type="text/javascript">
 		var base_url = '<?php echo base_url(); ?>';

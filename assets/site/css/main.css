@@ -1183,3 +1183,16 @@ input, textarea, button
 {
     border-top: 1px solid #333F48; border-bottom: 1px solid #333F48; padding: 15px 0 0 0;
 }
+#content-lightbox{
+	height: 100%; left: 0px; visibility: hidden; position: fixed; text-align: center; top: 0px; width: 100%; z-index: 100;
+}
+#content-lightbox>div{
+	display: inline-block; margin-top: 25px;
+}
+#image-lightbox
+{
+	border: 15px solid #e5e6e6;
+}
+#content-lightbox>div>span{
+	background: #d1cbc3; display: block; font-style: italic; text-align: left; padding-left: 10px;
+}
