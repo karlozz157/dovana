@@ -1198,5 +1198,5 @@ input, textarea, button
 }
 #close-lightbox
 {
-	display: block; float: right; top: 22px; position: relative;
+	cursor: pointer; display: block; float: right; left: 20px; position: relative;
 }
