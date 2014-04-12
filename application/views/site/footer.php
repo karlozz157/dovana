@@ -37,8 +37,8 @@
 
 					$('#image-lightbox').css(
 					{
-						height     : height/6,
-						width      : width/6,
+						height     : height/5,
+						width      : width/5,
 					}).parent().parent().css('visibility', 'visible');
 
 				}, 500);

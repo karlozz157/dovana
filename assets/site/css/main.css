@@ -1191,8 +1191,12 @@ input, textarea, button
 }
 #image-lightbox
 {
-	border: 15px solid #e5e6e6;
+	border: 20px solid #e5e6e6;
 }
 #content-lightbox>div>span{
 	background: #d1cbc3; display: block; font-style: italic; text-align: left; padding-left: 10px;
+}
+#close-lightbox
+{
+	display: block; float: right; top: 22px; position: relative;
 }
