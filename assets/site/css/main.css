@@ -1195,6 +1195,7 @@ input, textarea, button
 }
 #content-lightbox>div>span{
 	background: #d1cbc3; display: block; font-style: italic; text-align: left; padding-left: 10px;
+	width: 96.5%;
 }
 #close-lightbox
 {
