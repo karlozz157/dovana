@@ -12,3 +12,6 @@
 		console.log(result.responseText);
 	});
 </script>
+<noscript>
+	<h1>Your browser does not support JavaScript!</h1>
+</noscript>
