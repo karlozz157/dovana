@@ -21,8 +21,10 @@
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 
-			$('.lightbox').click(function()
+			$('.lightbox').click(function(event)
 			{
+				event.preventDefault();
+
 				var src = $(this).attr('href');
 
 				$('body').append('<div id="content-lightbox"><div><img src="'+base_url+'assets/site/images/close-icon.png" id="close-lightbox" /><img src="'+src+'" id="image-lightbox"/><span>* Para comprar esta obra favor de ir decoración para el hogar // arte</span></div></div>');
