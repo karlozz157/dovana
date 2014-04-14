@@ -788,6 +788,10 @@ input, textarea, button
 	padding-bottom: 25px;
 	border-bottom: 1px solid #4B565C;	
 }
+#products-cart
+{
+	margin-top: -7px;
+}
  #products-cart td
 {
 	font-size: 9pt;
