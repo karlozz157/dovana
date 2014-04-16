@@ -167,32 +167,32 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 	var checkoutTotal = '<?php echo $maxTotal; ?>';
 
-	function getIva()
+	function getIva(price)
 	{
 		var iva    = $('#factura').attr('data-iva');
 		var result = 0;
 
 		if(true === $('#factura')[0].checked)
-			result = (parseFloat(iva)/100 * parseFloat(checkoutTotal)) + parseFloat(checkoutTotal);
+			result = (parseFloat(iva)/100 * parseFloat(price)) + parseFloat(price);
 		else
-			result = ((parseFloat(iva)/100 * parseFloat(checkoutTotal)) + parseFloat(checkoutTotal)) - (parseFloat(iva)/100 * parseFloat(checkoutTotal));		
+			result = ((parseFloat(iva)/100 * parseFloat(price)) + parseFloat(price)) - (parseFloat(iva)/100 * parseFloat(price));		
 		
 		return result;
 	}
 
 	$('#factura').live('click', function()
 	{
-		var result    = getIva();
 		var envoltura = parseFloat($($('#sending')[0][$('#sending')[0].selectedIndex]).attr('data-price'));
-		$('#checkout-total span b').html(number_format(result + envoltura) + '.00');
+		var result    = getIva(checkoutTotal + envoltura);
+		$('#checkout-total span b').html(number_format(result) + '.00');
 	});
 
 
 	$('#sending').live('change', function()
 	{	
 		var envoltura = parseFloat($($(this)[0][$(this)[0].selectedIndex]).attr('data-price'));
-		var factura   = getIva();
-		$('#checkout-total span b').html(number_format(envoltura + factura) + '.00');
+		var result    = getIva(checkoutTotal + envoltura);
+		$('#checkout-total span b').html(number_format(result) + '.00');
 	});
 
 })();
